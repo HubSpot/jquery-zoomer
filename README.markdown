@@ -12,4 +12,4 @@ Tested and working: Chrome, FF3.6+, IE8+
 
 ### Demo
 
-*Coming soon!*
+(Here)[http://hubspot.github.com/jquery-zoomer/]
