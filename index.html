@@ -10,7 +10,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="jquery.zoomer.js"></script>
     <title>Jquery Zoomer by HubSpot</title>
   </head>
@@ -49,15 +49,24 @@
 <h3>Demo</h3>
 
 <div>
+  <p>Click <a href="javascript: $('iframe').contents().find('#main_content').append('<h1>Whoa....</h1>'); void(0);">here</a> to insert text into the iFrame.</p>
   <style>
     iframe {
       border: 0px;
+    }
+    .zoomer-wrapper {
+      border: 1px solid #aaa;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+      -ms-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+      -o-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
   <iframe src="iframe.html"></iframe>
   <script>
     $(function(){
-      $('iframe').zoomer({ width: 400, zoom: 0.5 });
+      $('iframe').zoomer({ width: 618, height: 400, zoom: 0.6 });
     })
   </script>
 </div>
