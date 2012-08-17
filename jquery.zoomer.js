@@ -21,12 +21,6 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
             width: 'auto',
             height: 'auto',
             zoom: 0.4,
-            minHeight: 100,
-            maxHeight: 400,
-            marginLeft: 0,
-            marginRight: 0,
-            marginTop: 0,
-            marginBottom: 0,
             tranformOrigin: '0 0',
             //loading
             loadingType: 'message', // other type: 'spinner'
