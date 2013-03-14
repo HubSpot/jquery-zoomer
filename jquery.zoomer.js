@@ -176,7 +176,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .hide()
             ;
 
-            if ($.browser.msie) {
+            if (navigator.userAgent.match(/MSIE/)) {
                 options.zoomerLink.css({
                     backgroundColor: 'rgba(255, 255, 255, 0.5)'
                 });
@@ -227,7 +227,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .append(options.zoomerLoader)
             ;
 
-            if ($.browser.msie) {
+            if (navigator.userAgent.match(/MSIE/)) {
                 options.zoomerLoader.css(invisible);
             }
 
@@ -250,7 +250,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeIn: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
+            if (navigator.userAgent.match(/MSIE/)) {
                 return $el;
             }
 
@@ -282,7 +282,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeOut: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
+            if (navigator.userAgent.match(/MSIE/)) {
                 return $el;
             }
 
@@ -306,7 +306,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         zoom: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
+            if (navigator.userAgent.match(/MSIE/)) {
                 setTimeout(function(){
                     var version = parseInt($.browser.version, 10);
 
