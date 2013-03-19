@@ -55,7 +55,8 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         }
     ;
 
-    var isMSIE = navigator.userAgent.match(/MSIE/);
+    var isMSIE      = navigator.userAgent.match(/MSIE/);
+    var MSIEVersion = navigator.userAgent.match(/MSIE (\d\.\d+)/) ? parseInt(RegExp.$1, 10) : null;
 
     methods = {
 
@@ -304,13 +305,11 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
 
             if (isMSIE) {
                 setTimeout(function(){
-                    var version = parseInt($.browser.version, 10);
-
                     $el
                         .css({
                             zoom: options.zoom,
-                            height: parseInt((options.height / options.zoom) *  (1 / (version >= 9 ? 1 : options.zoom)), 10),
-                            width: parseInt((options.width / options.zoom) * (1 / (version >= 9 ? 1 : options.zoom)), 10)
+                            height: parseInt((options.height / options.zoom) *  (1 / (MSIEVersion >= 9 ? 1 : options.zoom)), 10),
+                            width: parseInt((options.width / options.zoom) * (1 / (MSIEVersion >= 9 ? 1 : options.zoom)), 10)
                         })
                         .css(visible)
                     ;
