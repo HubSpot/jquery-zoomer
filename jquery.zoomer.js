@@ -55,6 +55,8 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         }
     ;
 
+    var isMSIE = navigator.userAgent.match(/MSIE/);
+
     methods = {
 
         init: function(opts) {
@@ -176,7 +178,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .hide()
             ;
 
-            if (navigator.userAgent.match(/MSIE/)) {
+            if (isMSIE) {
                 options.zoomerLink.css({
                     backgroundColor: 'rgba(255, 255, 255, 0.5)'
                 });
@@ -227,9 +229,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .append(options.zoomerLoader)
             ;
 
-            if (navigator.userAgent.match(/MSIE/)) {
-                options.zoomerLoader.css(invisible);
-            }
+            if (isMSIE) { options.zoomerLoader.css(invisible); }
 
             return $el[pluginName]('updateWrapper')[pluginName]('fadeOut');
         },
@@ -250,9 +250,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeIn: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if (navigator.userAgent.match(/MSIE/)) {
-                return $el;
-            }
+            if (isMSIE) { return $el; }
 
             $el.css(invisible);
 
@@ -282,9 +280,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeOut: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if (navigator.userAgent.match(/MSIE/)) {
-                return $el;
-            }
+            if (isMSIE) { return $el; }
 
             options.zoomerSmall
                 .stop()
@@ -306,7 +302,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         zoom: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if (navigator.userAgent.match(/MSIE/)) {
+            if (isMSIE) {
                 setTimeout(function(){
                     var version = parseInt($.browser.version, 10);
 
