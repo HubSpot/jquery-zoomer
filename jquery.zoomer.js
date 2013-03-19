@@ -1,5 +1,5 @@
 /*
- * jQuery Zoomer v1.0
+ * jQuery Zoomer v1.1
  *
  * By HubSpot  >('_')<
  *
@@ -52,11 +52,10 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         },
         relative = {
             position: 'relative'
-        }
+        },
+        isMSIE = navigator.userAgent.match(/MSIE/),
+        MSIEVersion = navigator.userAgent.match(/MSIE (\d\.\d+)/) ? parseInt(RegExp.$1, 10) : null
     ;
-
-    var isMSIE      = navigator.userAgent.match(/MSIE/);
-    var MSIEVersion = navigator.userAgent.match(/MSIE (\d\.\d+)/) ? parseInt(RegExp.$1, 10) : null;
 
     methods = {
 
