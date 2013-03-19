@@ -1,5 +1,5 @@
 /*
- * jQuery Zoomer v1.0
+ * jQuery Zoomer v1.1
  *
  * By HubSpot  >('_')<
  *
@@ -52,7 +52,9 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         },
         relative = {
             position: 'relative'
-        }
+        },
+        isMSIE = navigator.userAgent.match(/MSIE/),
+        MSIEVersion = navigator.userAgent.match(/MSIE (\d\.\d+)/) ? parseInt(RegExp.$1, 10) : null
     ;
 
     methods = {
@@ -176,7 +178,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .hide()
             ;
 
-            if ($.browser.msie) {
+            if (isMSIE) {
                 options.zoomerLink.css({
                     backgroundColor: 'rgba(255, 255, 255, 0.5)'
                 });
@@ -227,9 +229,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
                 .append(options.zoomerLoader)
             ;
 
-            if ($.browser.msie) {
-                options.zoomerLoader.css(invisible);
-            }
+            if (isMSIE) { options.zoomerLoader.css(invisible); }
 
             return $el[pluginName]('updateWrapper')[pluginName]('fadeOut');
         },
@@ -250,9 +250,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeIn: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
-                return $el;
-            }
+            if (isMSIE) { return $el; }
 
             $el.css(invisible);
 
@@ -282,9 +280,7 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         fadeOut: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
-                return $el;
-            }
+            if (isMSIE) { return $el; }
 
             options.zoomerSmall
                 .stop()
@@ -306,15 +302,13 @@ $('iframe').zoomer({ width: 200, zoom: 0.5 });
         zoom: function() {
             var $el = $(this), options = $el.data(pluginName);
 
-            if ($.browser.msie) {
+            if (isMSIE) {
                 setTimeout(function(){
-                    var version = parseInt($.browser.version, 10);
-
                     $el
                         .css({
                             zoom: options.zoom,
-                            height: parseInt((options.height / options.zoom) *  (1 / (version >= 9 ? 1 : options.zoom)), 10),
-                            width: parseInt((options.width / options.zoom) * (1 / (version >= 9 ? 1 : options.zoom)), 10)
+                            height: parseInt((options.height / options.zoom) *  (1 / (MSIEVersion >= 9 ? 1 : options.zoom)), 10),
+                            width: parseInt((options.width / options.zoom) * (1 / (MSIEVersion >= 9 ? 1 : options.zoom)), 10)
                         })
                         .css(visible)
                     ;
