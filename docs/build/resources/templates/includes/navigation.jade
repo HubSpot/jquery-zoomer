@@ -1,0 +1,26 @@
+.hs-doc-sidenav
+
+  nav
+
+    ul.hs-public-sidenav
+
+      li.current-nav-item
+
+        a(href) About
+
+      li
+        a(href="/documentation-example/api") API Documentation
+
+      li
+        b Annotated source
+
+      each file in files
+        li
+          a(href=file.path)= file.displayPath
+
+      li
+        b Examples
+
+      each example in examples
+        li
+          a(href=example.path)= example.displayPath
