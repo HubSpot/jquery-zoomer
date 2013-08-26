@@ -1,11 +1,13 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="http://github.hubspot.com/jquery-zoomer/jquery.zoomer.js"></script>
+
 <h3>Browser support</h3>
 
 <p>Tested and working: Chrome, FF3.6+, IE8+</p>
 
 <h3>Usage</h3>
 
-<pre><code>$('iframe').zoomer({ width: 200, zoom: 0.5 });
-</code></pre>
+<pre><code>$('iframe').zoomer({ width: 200, zoom: 0.5 });</code></pre>
 
 <h3>Demo</h3>
 
