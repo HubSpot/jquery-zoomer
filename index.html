@@ -36,7 +36,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
 
 <h4>Options</h4>
 
-<table>
+<table class="hs-table">
 <tr>
 <th width="35%">Name</th>
 <th>Default [Description]</th>
@@ -58,7 +58,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
 
 <h4>Methods</h4>
 
-<table>
+<table class="hs-table">
 <tr>
 <th width="50%">Name</th>
 <th>Description</th>
