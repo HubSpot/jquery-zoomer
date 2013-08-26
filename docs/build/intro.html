@@ -13,7 +13,7 @@
 <h3>Demo</h3>
 
 <div>
-<p>Click <a href="javascript: $('iframe').contents().find('#main_content').append('<h1>Whoa....</h1>'); void(0);">here</a> to insert text into the iFrame.</p>
+<p>Click <a href="javascript: $('iframe').contents().find('.demo-container').append('<h4>Inserted text</h4>'); void(0);">here</a> to insert text into the iFrame.</p>
 <style>
 iframe {
 border: 0px;
