@@ -1,3 +1,3 @@
 $(function(){
-    $('iframe').zoomer({ width: 618, height: 400, zoom: 0.6 });
+    $('iframe').zoomer({ width: 360, height: 360, zoom: 0.5 });
 });
