@@ -29,7 +29,7 @@ box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
 <iframe src="iframe.html"></iframe>
 <script>
 $(function(){
-$('iframe').zoomer({ width: 618, height: 400, zoom: 0.6 });
+$("iframe").zoomer({ width: 618, height: 400, zoom: 0.6 });
 })
 </script>
 </div>
