@@ -8,7 +8,9 @@
 
 <h3>Usage</h3>
 
-<pre><code>$('iframe').zoomer({ width: 200, zoom: 0.5 });</code></pre>
+````javascript
+$('iframe').zoomer({ width: 200, zoom: 0.5 });
+````
 
 <h3>Demo</h3>
 
