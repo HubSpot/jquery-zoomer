@@ -5,21 +5,19 @@
     ul.hs-public-sidenav
 
       li(class=(path == 'index.html' ? 'current-nav-item' : ''))
-        a(href=linkPrefix + 'index.html') About
-
-      li
-        b Annotated source
-
-        ul
-          each file in sources
-            li(class=(file.path == path ? 'current-nav-item' : ''))
-              a(href=linkPrefix + file.path)= file.displayPath
+        a(href=linkPrefix + 'index.html') Home
 
       each group, name in docs
         li
           b= name
 
-          ul
-            each doc in group
-              li(class=(doc.path == path ? 'current-nav-item' : ''))
-                a(href=linkPrefix + doc.path)= doc.displayPath
+        each doc in group
+          li(class=(doc.path == path ? 'current-nav-item' : ''))
+            a(href=linkPrefix + doc.path)= doc.displayPath
+
+      li
+        b Annotated source
+
+      each file in sources
+        li(class=(file.path == path ? 'current-nav-item' : ''))
+          a(href=linkPrefix + file.path)= file.displayPath
