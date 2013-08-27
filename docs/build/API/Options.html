@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>jQuery Zoomer</title><link rel="icon" href="http://static.hubspot.com/favicon.ico"><link type="text/css" rel="stylesheet" href="https://static2cdn.hubspot.com/hubspot_public_assets/static-1.112/shared/sass/hubspot_public_assets.css"><link type="text/css" rel="stylesheet" href="https://static.hubspot.com/bundles/navigation.css"><link rel="stylesheet" href="http://github.hubspot.com/documentation-example/css/print.css"><link rel="stylesheet" href="http://github.hubspot.com/documentation-example/css/navigation.css"><link rel="stylesheet" href="http://github.hubspot.com/documentation-example/css/documentation.css"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script type="text/javascript" src="//use.typekit.net/jbn8qxr.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}
+</script></head><body><div id="hs-nav-v3" class="nav-width-flex signed-out-nav">
+    <div class="hs-nav-section main-nav">
+        <div class="nav-section-inner">
+            <ul class="nav-links-left">
+                <li class="first"><a class="nav-logo" href="http://www.hubspot.com/"><img height="34" src="https://static.hubspot.com/style-guide/img/nav-sprocket.png" width="29"></a></li>
+                <li>
+                    <a href="http://hubspot.github.com">
+                        HubSpot Open Source
+                    </a>
+                </li>
+                <li>
+                    <a href="http://dev.hubspot.com">
+                        Development Team
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-links-right">
+                <li class="first">
+                    <a href="https://login.hubspot.com/login/" class="sign-in">Work for HubSpot</a>
+                </li>
+                <li>
+                    <span class="try-label">We're hiring:</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><div class="hs-page-width-normal"><div class="row-fluid"><div class="span12"><h1>jQuery Zoomer</h1></div></div><div class="row-fluid"><div class="span3"><div class="hs-doc-sidenav"><nav><ul class="hs-public-sidenav"><li class=""><a href="../../index.html">About</a></li><li><b>Annotated source</b><ul><li class=""><a href="../../docs/build/source/jquery.zoomer.html">jquery.zoomer.js</a></li></ul></li><li><b>API</b><ul><li class="current-nav-item"><a href="../../docs/build/API/Options.html">Options</a></li></ul></li><li><b>.</b><ul><li class=""><a href="../../docs/build/intro.html">intro</a></li></ul></li></ul></nav></div></div><div class="span9"><div class="hs-doc-content"><h2>API Documentation</h2>
+<h3>Options</h3>
+<table class="hs-table">
+<tr>
+<th width="35%">Name</th>
+<th>Default [Description]</th>
+</tr>
+<tbody>
+<tr><td>width</td> <td><code>&#39;auto&#39;</code></td></tr>
+<tr><td>height</td> <td><code>&#39;auto&#39;</code></td></tr>
+<tr><td>zoom</td> <td><code>0.4</code></td></tr>
+<tr><td>tranformOrigin</td> <td><code>&#39;0 0&#39;</code><br/></td></tr>
+<tr><td>loadingType</td> <td><code>&#39;message&#39;</code><br/>Other option: <code>&#39;spinner&#39;</code></td></tr>
+<tr><td>loadingMessage</td> <td><code>&#39;Generating preview...&#39;</code><br/>Message displayed while the iFrame is loading</td></tr>
+<tr><td>spinnerURL</td> <td><code>&#39;<a href="http://oi46.tinypic.com/6y375z.jpg">http://oi46.tinypic.com/6y375z.jpg</a>&#39;</code><br/>Requires <code>loadingType: &#39;spinner&#39;</code></td></tr>
+<tr><td>message</td> <td><code>&#39;Open Page&#39;</code><br/>The text displayed on hover</td></tr>
+<tr><td>ieMessageButtonClass</td> <td><code>&#39;btn btn-secondary&#39;</code><br/>Class name added to the Open Page button in IE</td></tr>
+<tr><td>messageURL</td> <td><code>false</code><br/>Use a different URL on click then the <code>src</code> of the iFrame</td></tr>
+<tr><td>onComplete</td> <td><code>function($iframe) {}</code><br/>Callback function after the iFrame has loaded and been zoomed</td></tr>
+</tbody>
+</table>
+
+<h3>Methods</h3>
+<table class="hs-table">
+<tr>
+<th width="50%">Name</th>
+<th>Description</th>
+</tr>
+<tbody>
+<tr><td>$iframe.zoomer(&#39;fadeIn&#39;)</td> <td>Fades out the loading message to reveal the iFrame beneath.</td></tr>
+<tr><td>$iframe.zoomer(&#39;fadeOut&#39;)</td> <td>Fades in the loading message to hide the iFrame beneath.</td></tr>
+<tr><td>$iframe.zoomer(&#39;src&#39;, newSrc)</td> <td>Changes the src of the iFrame seamlessly. (Fades in the loading message, sets the iFrame src to <code>newSrc</code> and then fades out the loading message after the iFrame finishes loading and gets zoomed.)</td></tr>
+<tr><td>$iframe.zoomer(&#39;refresh&#39;)</td> <td>Alias to calling <code>$iframe.zoomer(&#39;src&#39;, currentSrc)</code> </td></tr>
+<tr><td>$iframe.zoomer(&#39;zoomedBodyHeight&#39;)</td> <td>Returns the height of the iFrame in zoomed space. (Example: if iFrame contents have height of <code>800px</code> and zoom is set to <code>0.5</code>, returns <code>400</code>.)</td></tr>
+</tbody>
+</table></div></div></div></div><div class="hs3-public-footer"><div class="row-fluid hs-page-width-normal"><div class="span3 hidden-phone"><h3>HubSpot</h3><ul><li><a href="http://www.hubspot.com">Home</a></li><li><a href="http://www.hubspot.com/software">Products</a></li><li><a href="http://www.hubspot.com/internet-marketing-company/">About</a></li></ul></div><div class="span3"><h3>Projects</h3><ul><li><a href="http://github.hubspot.com/messenger">Messenger</a></li><li><a href="http://github.hubspot.com/facewall">Facewall</a></li><li><a href="http://github.hubspot.com/jquery-zoomer">jQuery Zoomer</a></li><li><a href="http://github.hubspot.com/humanize">Humanize</a></li><li><a href="http://github.hubspot.com/teeble">Teeble</a></li></ul></div><div class="span3"><h3>Development Team</h3><ul><li><a href="http://dev.hubspot.com">Home</a></li><li><a href="http://dev.hubspot.com/teams">Teams</a></li><li><a href="http://dev.hubspot.com/people">People</a></li><li><a href="http://dev.hubspot.com/jobs">Jobs</a></li></ul></div><div class="span3 hidden-phone"><h3>Developer API</h3><ul><li><a href="http://developers.hubspot.com/">Developer Documentation</a></li></ul></div></div></div></body></html>
