@@ -4,23 +4,22 @@
 
     ul.hs-public-sidenav
 
-      li.current-nav-item
-
-        a(href) About
-
-      li
-        a(href="/documentation-example/api") API Documentation
+      li(class=(path == 'index.html' ? 'current-nav-item' : ''))
+        a(href=linkPrefix + 'index.html') About
 
       li
         b Annotated source
 
-      each file in files
-        li
-          a(href=file.path)= file.displayPath
+        ul
+          each file in sources
+            li(class=(file.path == path ? 'current-nav-item' : ''))
+              a(href=linkPrefix + file.path)= file.displayPath
 
-      li
-        b Examples
-
-      each example in examples
+      each group, name in docs
         li
-          a(href=example.path)= example.displayPath
+          b= name
+
+          ul
+            each doc in group
+              li(class=(doc.path == path ? 'current-nav-item' : ''))
+                a(href=linkPrefix + doc.path)= doc.displayPath
