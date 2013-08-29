@@ -22,11 +22,6 @@ border: 0px;
 }
 .zoomer-wrapper {
 border: 1px solid #aaa;
-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
--webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
--moz-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
--ms-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
--o-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
 }
 </style>
 <iframe src="iframe.html"></iframe>
