@@ -24,7 +24,7 @@ border: 0px;
 border: 1px solid #aaa;
 }
 </style>
-<iframe src="iframe.html"></iframe>
+<iframe class="demo" src="iframe.html"></iframe>
 <script src="http://github.hubspot.com/jquery-zoomer/jquery.zoomer.js"></script>
 <script src="http://github.hubspot.com/jquery-zoomer/docs/demo.js"></script>
 </div>
