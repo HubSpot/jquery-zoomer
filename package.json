@@ -1,0 +1,14 @@
+{
+  "name": "jquery-zoomer",
+  "version": "1.1",
+  "description": "Zoom up your iFrames",
+  "main": "jquery.zoomer.js",
+  "keywords": [
+    "jQuery Zoomer transform CSS"
+  ],
+  "author": {
+    "name": "Adam Schwartz",
+    "email": "aschwartzm@hubspot.com"
+  },
+  "license": "MIT"
+}
