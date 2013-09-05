@@ -1,0 +1,36 @@
+<h2>API Documentation</h2>
+<h3>Options</h3>
+<table class="hs-table">
+<tr>
+<th width="35%">Name</th>
+<th>Default [Description]</th>
+</tr>
+<tbody>
+<tr><td>width</td> <td><code>&#39;auto&#39;</code></td></tr>
+<tr><td>height</td> <td><code>&#39;auto&#39;</code></td></tr>
+<tr><td>zoom</td> <td><code>0.4</code></td></tr>
+<tr><td>tranformOrigin</td> <td><code>&#39;0 0&#39;</code><br/></td></tr>
+<tr><td>loadingType</td> <td><code>&#39;message&#39;</code><br/>Other option: <code>&#39;spinner&#39;</code></td></tr>
+<tr><td>loadingMessage</td> <td><code>&#39;Generating preview...&#39;</code><br/>Message displayed while the iFrame is loading</td></tr>
+<tr><td>spinnerURL</td> <td><code>&#39;<a href="http://oi46.tinypic.com/6y375z.jpg">http://oi46.tinypic.com/6y375z.jpg</a>&#39;</code><br/>Requires <code>loadingType: &#39;spinner&#39;</code></td></tr>
+<tr><td>message</td> <td><code>&#39;Open Page&#39;</code><br/>The text displayed on hover</td></tr>
+<tr><td>ieMessageButtonClass</td> <td><code>&#39;btn btn-secondary&#39;</code><br/>Class name added to the Open Page button in IE</td></tr>
+<tr><td>messageURL</td> <td><code>false</code><br/>Use a different URL on click then the <code>src</code> of the iFrame</td></tr>
+<tr><td>onComplete</td> <td><code>function($iframe) {}</code><br/>Callback function after the iFrame has loaded and been zoomed</td></tr>
+</tbody>
+</table>
+
+<h3>Methods</h3>
+<table class="hs-table">
+<tr>
+<th width="50%">Name</th>
+<th>Description</th>
+</tr>
+<tbody>
+<tr><td>$iframe.zoomer(&#39;fadeIn&#39;)</td> <td>Fades out the loading message to reveal the iFrame beneath.</td></tr>
+<tr><td>$iframe.zoomer(&#39;fadeOut&#39;)</td> <td>Fades in the loading message to hide the iFrame beneath.</td></tr>
+<tr><td>$iframe.zoomer(&#39;src&#39;, newSrc)</td> <td>Changes the src of the iFrame seamlessly. (Fades in the loading message, sets the iFrame src to <code>newSrc</code> and then fades out the loading message after the iFrame finishes loading and gets zoomed.)</td></tr>
+<tr><td>$iframe.zoomer(&#39;refresh&#39;)</td> <td>Alias to calling <code>$iframe.zoomer(&#39;src&#39;, currentSrc)</code> </td></tr>
+<tr><td>$iframe.zoomer(&#39;zoomedBodyHeight&#39;)</td> <td>Returns the height of the iFrame in zoomed space. (Example: if iFrame contents have height of <code>800px</code> and zoom is set to <code>0.5</code>, returns <code>400</code>.)</td></tr>
+</tbody>
+</table>
