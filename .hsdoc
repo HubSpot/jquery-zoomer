@@ -1,3 +1,4 @@
 title: "jQuery Zoomer"
 source: "*.js"
 examples: "**/*.md"
+assets: "jquery.zoomer.js"
