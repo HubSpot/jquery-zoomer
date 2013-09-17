@@ -31,4 +31,4 @@ border: 1px solid #aaa;
 
 ### Full Reference
 
-For a full reference, see our [API documentation](http://github.hubspot.com/jquery-zoomer/docs/build/api/options).
+For a full reference, see our [API documentation](http://github.hubspot.com/jquery-zoomer/api/options).
