@@ -33,6 +33,16 @@ border: 1px solid #aaa;
 <script src="http://github.hubspot.com/jquery-zoomer/docs/demo.js"></script>
 </div>
 
+Once a Zoomer has already been zoomed, you can adjust the zoom amount by later calling:
+
+```javascript
+zoom = 0.25; // Change me to any number 0–1 and then hit "Run"
+
+$iframe = $('iframe.demo');
+$iframe.data().zoomer.zoom = zoom;
+$iframe.zoomer('refresh');
+```
+
 ### Full Reference
 
 For a full reference, see our [API documentation](http://github.hubspot.com/jquery-zoomer/api/options).
