@@ -11,11 +11,12 @@ Tested and working: Chrome, FF3.6+, IE8+
 ````javascript
 $('iframe.zoomer').zoomer({ width: 200, zoom: 0.5 });
 ````
+(Note: this example has already been run on the iFrame below.)
 
 ### Demo
 
 <div>
-<p>Click <a href="javascript: $('iframe').contents().find('.demo-container').append('<h4>Inserted text</h4>'); void(0);">here</a> to insert text into the iFrame.</p>
+<p>Click the iFrame to open the URL in a separate browser window/tab.</p>
 <style>
 iframe {
 border: 0px;
