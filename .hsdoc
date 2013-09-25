@@ -1,4 +1,5 @@
 title: "jQuery Zoomer"
+description: "Zoom up your iFrames"
 source: "*.js"
 examples: "**/*.md"
 assets: "{jquery.zoomer.js,docs/iframe.html,docs/demo.js}"
